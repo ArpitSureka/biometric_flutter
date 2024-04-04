@@ -10,16 +10,29 @@ Widget build(BuildContext context) {
     //   title: Text('Home Page'),
     // ),
     // backgroundColor: Color.fromRGBO(),
+    backgroundColor: Colors.black,
     body: Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 60, 20, 60),
+            padding: const EdgeInsets.fromLTRB(20, 60, 20, 10),
             child: Image.asset(
               'assets/images/iitg-logo.png', // Replace 'assets/logo.png' with your image path
               height: 100,
               width: 100,
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(20, 30, 20, 30),
+            child: Text(
+              'Biometric Recognition using Fingerprint',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           Expanded(
@@ -35,35 +48,30 @@ Widget build(BuildContext context) {
                         onPressed: () {
                           Navigator.pushNamed(context, '/addImage');
                         },
-                        child: const Padding(
-                          padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
-                          child: Text('Add Fingerprint'),
+                        child: const SizedBox(
+                          width : 150,
+                          height: 50,
+                          child: Center(child: Text('Add Fingerprint')),
                         ),
                       ),
                       ElevatedButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/listFiles');
                         },
-                        child: const Padding(
-                          padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
-                          child: Text('Database'),
+                        child: const SizedBox(
+                            width : 150,
+                            height: 50,
+                            child: Center(child: Text('Database'))
                         ),
                       ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
                       ElevatedButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/compare');
                         },
-                        child: const Padding(
-                          padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
-                          child: Text('Compare Fingerprints'),
+                        child: const SizedBox(
+                            width : 150,
+                            height: 50,
+                            child: Center(child: Text('Compare Fingerprints'))
                         ),
                       ),
                       ElevatedButton(
@@ -73,20 +81,33 @@ Widget build(BuildContext context) {
                             MaterialPageRoute(builder: (context) => Page4()),
                           );
                         },
-                        child: const Padding(
-                          padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
-                          child: Text('About US'),
+                        child: const SizedBox(
+                          width : 150,
+                          height: 50,
+                          child: Center(child: Text('About US')),
                         ),
                       ),
                     ],
                   ),
                 ),
-              ],
+                ],
             ),
           ),
           const Padding(
-            padding: EdgeInsets.fromLTRB(20, 60, 20, 60),
-            child: Text('© Arpit Sureka, Archit Avadhane'),
+            padding: EdgeInsets.fromLTRB(20, 40, 20, 20),
+            child: Text(
+              '© Arpit Sureka, Archit Avadhane',
+              style: TextStyle(
+                color: Colors.white,
+              )
+          ),
+          ),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(20, 0, 20, 40),
+            child: Text('BTP IIT-Guwahati Mechanical Department',
+                style: TextStyle(
+                  color: Colors.white,
+                )),
           ),
         ],
       ),
