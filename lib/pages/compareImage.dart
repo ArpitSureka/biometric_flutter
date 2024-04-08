@@ -67,23 +67,22 @@ class _CompareImageState extends State<CompareImage> {
               jsonData; // Assuming 'data' is the key for the list in JSON
         });
         setState(() => this.status = 2);
-        int maximum = 0;
+        double maximum = 0;
         String new_match = match;
         for (var i = 0; i < dataList.length; i++) {
+          print(dataList[i]['second']);
+          print(maximum);
           if (dataList[i]['second'] > maximum) {
             maximum = dataList[i]['second'];
             new_match = dataList[i]['first'] +
-                " matched with " +
-                dataList[i]['second'] +
-                " score";
+                " matched";
           }
         }
+        print(new_match);
         setState(() => match = new_match);
         // ScaffoldMessenger.of(context).showSnackBar(
         //     new SnackBar(content: new Text("Data sent successfully")));
       } else {
-        print('Failed to send data');
-        print(response.statusCode);
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text(
             "Error sending data",
