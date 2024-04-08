@@ -76,10 +76,7 @@ Widget build(BuildContext context) {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Page4()),
-                          );
+                          Navigator.pushNamed(context, '/about');
                         },
                         child: const SizedBox(
                           width : 150,

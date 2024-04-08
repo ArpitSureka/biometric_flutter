@@ -13,16 +13,16 @@ class AddImage extends StatefulWidget {
 
 class _AddImageState extends State<AddImage> {
   File? _image;
-  final picker = ImagePicker();
+  // final picker = ImagePicker();
   TextEditingController _textEditingController = TextEditingController();
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   Future pickImage() async {
     try {
-      final image = await ImagePicker().pickImage(source: ImageSource.camera);
+      final image = await ImagePicker().pickImage(source: ImageSource.camera, maxHeight: 500, maxWidth: 500);
       if(image == null) return;
       final imageTemp = File(image.path);
-      setState(() => this._image = imageTemp);
+      setState(() => _image = imageTemp);
     } on PlatformException catch(e) {
       print('Failed to pick image: $e');
     }
@@ -71,15 +71,24 @@ class _AddImageState extends State<AddImage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text('Add Fingerprint to Database'),
+        title: const Text('Add Fingerprint to Database',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+        ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             _image == null
-                ? const Text('No image selected.')
+                ? const Text('No image selected.',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            )
                 : Image.file(
               _image!,
               width: 300,
@@ -94,10 +103,17 @@ class _AddImageState extends State<AddImage> {
               padding: const EdgeInsets.all(40.0),
               child: TextFormField(
                 controller: _textEditingController,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
                 decoration: const InputDecoration(
                   hintText: 'Enter Name for Fingerprint',
                   border: OutlineInputBorder(),
+                  hintStyle: TextStyle(
+                    color: Colors.white,
                 ),
+
+              ),
               ),
             ),
             ElevatedButton(

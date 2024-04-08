@@ -4,6 +4,7 @@ import 'package:biometric/pages/addImage.dart';
 import 'package:biometric/pages/showImage.dart';
 import 'package:biometric/pages/ListFiles.dart';
 import 'package:biometric/pages/compareImage.dart';
+import 'package:biometric/pages/AboutUs.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -14,6 +15,7 @@ void main() {
       '/addImage': (context) => AddImage(),
       '/listFiles': (context) => ListFiles(),
       '/compare': (context) => CompareImage(),
+      '/about': (context) => AboutUsPage(),
     },
   ));
 }

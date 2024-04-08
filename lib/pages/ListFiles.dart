@@ -43,6 +43,7 @@ class _ListFilesState extends State<ListFiles> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text('Database of Fingerprints'),
       ),
@@ -61,7 +62,9 @@ class _ListFilesState extends State<ListFiles> {
                       Expanded(
                         child: Text(
                           dataList[index]['name'], // Assuming 'name' is the key for name in JSON
-                          style: TextStyle(fontSize: 16.0),
+                          style: TextStyle(fontSize: 16.0,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                       ElevatedButton(
