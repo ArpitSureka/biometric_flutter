@@ -27,7 +27,7 @@ class _CompareImageState extends State<CompareImage> {
   Future pickImage() async {
     try {
       final image = await ImagePicker()
-          .pickImage(source: ImageSource.camera, maxHeight: 500, maxWidth: 500);
+          .pickImage(source: ImageSource.gallery, maxHeight: 500, maxWidth: 500);
       if (image == null) return;
       final imageTemp = File(image.path);
       setState(() => this._image = imageTemp);
