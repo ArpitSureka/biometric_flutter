@@ -19,7 +19,7 @@ class _AddImageState extends State<AddImage> {
 
   Future pickImage() async {
     try {
-      final image = await ImagePicker().pickImage(source: ImageSource.gallery, maxHeight: 500, maxWidth: 500);
+      final image = await ImagePicker().pickImage(source: ImageSource.gallery, maxHeight: 1200, maxWidth: 1200);
       if(image == null) return;
       final imageTemp = File(image.path);
       setState(() => _image = imageTemp);

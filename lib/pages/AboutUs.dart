@@ -14,22 +14,22 @@ class AboutUsPage extends StatelessWidget {
             PersonWidget(
               name: 'Arpit Sureka',
               image: 'assets/images/1677913414wer.jpg',
-              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              description: 'B.Tech Student 2020-2024 (200103127),            Mechanical Department, IITG',
             ),
             PersonWidget(
               name: 'Archit Avadhane',
-              image: 'assets/images/16779134',
-              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              image: 'assets/images/16779134.jpeg',
+              description: 'B.Tech Student 2020-2024 (200103016),                Mechanical Department, IITG',
             ),
             PersonWidget(
               name: 'Satish Kumar Panda',
               image: 'assets/images/iit_1673236760.jpg',
-              description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+              description: 'BTP Supervisor, Assistant Professor, Mechanical Department, IIT BHU',
             ),
             PersonWidget(
               name: 'Sandeep Reddy Basireddy',
               image: 'assets/images/CET_4134.original.jpg',
-              description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+              description: 'BTP Supervisor, Assistant Professor, Mechanical Department, IITG',
             ),
           ],
         ),
